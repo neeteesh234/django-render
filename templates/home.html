@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Price Predictor</title>
+     {% comment %} <link rel="stylesheet" href="{% static 'css/style.css' %}"> {% endcomment %}
+
+</head>
+<body>
+    <h1>Predict House Price</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label>Square Feet:</label>
+        <input type="number" name="sqft" required><br><br>
+
+        <label>Bedrooms:</label>
+        <input type="number" name="bedrooms" required><br><br>
+
+        <label>Location (0/1/2):</label>
+        <input type="number" name="location" required><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
